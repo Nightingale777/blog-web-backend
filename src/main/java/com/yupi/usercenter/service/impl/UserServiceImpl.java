@@ -23,6 +23,8 @@ import static com.yupi.usercenter.contant.UserConstant.USER_LOGIN_STATE;
  * 用户服务实现类
  *
  * @author yupi
+ * @description 针对表【user(用户表)】的数据库操作Service实现
+ * @createDate 2022-05-15 22:57:02
  */
 @Service
 @Slf4j
@@ -129,9 +131,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     /**
      * 用户脱敏
-     *
-     * @param originUser
-     * @return
+     * @param originUser 当前用户
+     * @return  当前用户的副本
      */
     @Override
     public User getSafetyUser(User originUser)  {
